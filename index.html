@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science Explorer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d1f;
+    color: white;
+    line-height: 1.7;
+}
+
+header {
+    padding: 22px 7%;
+    background: #111936;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    color: #66f2ff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}
+
+nav a:hover {
+    color: #66f2ff;
+}
+
+.hero {
+    min-height: 480px;
+    padding: 90px 7%;
+    text-align: center;
+    background: linear-gradient(135deg, #151b4b, #481b68, #082d4e);
+}
+
+.hero h1 {
+    font-size: clamp(34px, 7vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #66f2ff;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    color: #d8def5;
+    font-size: 17px;
+}
+
+.button {
+    display: inline-block;
+    background: #66f2ff;
+    color: #081226;
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #66f2ff;
+}
+
+.intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+    color: #c7cee6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #121b38;
+    border: 1px solid #29365e;
+    border-radius: 18px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #66f2ff;
+}
+
+.card .icon {
+    font-size: 35px;
+}
+
+.card h3 {
+    color: #a7a1ff;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #c7cee6;
+}
+
+.example {
+    background: #111936;
+    border-left: 4px solid #66f2ff;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.example strong {
+    color: #66f2ff;
+}
+
+.quiz-box {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+}
+
+.quiz-box button {
+    margin: 8px;
+    padding: 12px 18px;
+    border: 1px solid #66f2ff;
+    background: #121b38;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.quiz-box button:hover {
+    background: #29365e;
+}
+
+#quiz-result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #111936;
+    color: #c7cee6;
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    section {
+        padding: 48px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🔬 DS EXPLORER</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#learn">Learn</a>
+        <a href="#tools">Tools</a>
+        <a href="#quiz">Quiz</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <h1>Explore the World of<br><span>Data Science</span></h1>
+
+    <p>
+        Discover how data becomes knowledge.
+        Learn concepts, explore algorithms, understand real-world
+        applications, and begin your Data Science journey.
+    </p>
+
+    <a href="#learn" class="button">Start Exploring →</a>
+</section>
+
+<section id="learn">
+    <h2 class="section-title">Your Learning Journey</h2>
+
+    <p class="intro">
+        Start with the basics and gradually explore the exciting
+        world of data, analytics, and machine learning.
+    </p>
+
+    <div class="grid">
+
+        <article class="card">
+            <div class="icon">📊</div>
+            <h3>01. What Is Data Science?</h3>
+            <p>Learn how data is collected, studied, and transformed into useful insights.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">🌍</div>
+            <h3>02. Real-World Applications</h3>
+            <p>Discover how YouTube, shopping apps, maps, and banks use data.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">🔄</div>
+            <h3>03. Data Science Lifecycle</h3>
+            <p>Explore the journey from defining a problem to delivering a solution.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">🐍</div>
+            <h3>04. Programming Languages</h3>
+            <p>Understand Python, SQL, R, and their roles in data-related work.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">🤖</div>
+            <h3>05. Machine Learning</h3>
+            <p>Discover algorithms that learn patterns from data.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">📈</div>
+            <h3>06. Data Visualization</h3>
+            <p>Understand data through charts, graphs, and dashboards.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">🧰</div>
+            <h3>07. Essential Tools</h3>
+            <p>Explore Excel, Pandas, Jupyter, Google Colab, and Power BI.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">🎓</div>
+            <h3>08. Student Performance Project</h3>
+            <p>Explore an educational example using attendance, study hours, and marks.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">💼</div>
+            <h3>09. Career Opportunities</h3>
+            <p>Discover roles such as Data Analyst, Data Scientist, and ML Engineer.</p>
+        </article>
+
+    </div>
+</section>
+
+<section id="tools">
+    <h2 class="section-title">Tools of the Trade</h2>
+
+    <p class="intro">
+        Different tools help us collect, process, analyze, visualize,
+        and model data.
+    </p>
+
+    <div class="grid">
+        <article class="card">
+            <div class="icon">🐍</div>
+            <h3>Python</h3>
+            <p>A versatile language used for data analysis, automation, and machine learning.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">🗃️</div>
+            <h3>SQL</h3>
+            <p>Used to retrieve and organize information stored in databases.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">📗</div>
+            <h3>Excel</h3>
+            <p>Useful for organizing data, calculations, summaries, and charts.</p>
+        </article>
+
+        <article class="card">
+            <div class="icon">📊</div>
+            <h3>Power BI</h3>
+            <p>Helps create interactive dashboards and business reports.</p>
+        </article>
+    </div>
+
+    <div class="example">
+        <strong>Real-life example:</strong>
+        A college can analyze attendance and examination marks
+        to understand student performance. The analysis may reveal
+        patterns, but it does not automatically prove what caused them.
+    </div>
+</section>
+
+<section id="quiz">
+    <h2 class="section-title">Test Your Knowledge</h2>
+
+    <p class="intro">Try this beginner-friendly Data Science quiz!</p>
+
+    <div class="card quiz-box">
+        <h3>Which language is widely used in Data Science?</h3>
+
+        <button onclick="checkAnswer('a')">A. HTML only</button>
+        <button onclick="checkAnswer('b')">B. Python</button>
+        <button onclick="checkAnswer('c')">C. CSS only</button>
+
+        <p id="quiz-result" aria-live="polite"></p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>DATA SCIENCE EXPLORER</p>
+    <p>Understand Data. Discover Patterns. Build the Future.</p>
+    <p>Educational project created for learning and exploration.</p>
+</footer>
+
+<script>
+function checkAnswer(answer) {
+    const result = document.getElementById("quiz-result");
+
+    if (answer === "b") {
+        result.textContent = "Correct! 🎉 Python is widely used in Data Science.";
+        result.style.color = "#66f2ff";
+    } else {
+        result.textContent = "Not quite! Try again. 😊";
+        result.style.color = "#ffb4c8";
+    }
+}
+</script>
+
+</body>
+                              </html>
